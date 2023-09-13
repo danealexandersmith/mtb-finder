@@ -1,10 +1,11 @@
 const User = require('../Models/UserModel');
 const express = require('express');
 const { Console } = require('node:console'); 
+const bcrypt = require('bcryptjs');
 
 const userController = {}
 
-userController.testBody = async (req, res, next) => {
+userController.createUser = async (req, res, next) => {
     const { username, email, password } = req.body;
 
     const newUser = {
@@ -20,6 +21,24 @@ userController.testBody = async (req, res, next) => {
       .then((data) => console.log(data)).then(() => next())
       .catch((err) => next(err));
 }
+
+userController.authenticate = async (req, res, next) => {
+
+    const { username, password } = req.body;
+
+    if(!username) return res.redirect('/signup');
+
+    const user = await User.findOne({ userName: username });
+  
+    bcrypt.compare(password, user?.password)
+      .then(result => {
+        if (!result) {
+          return res.redirect('/signup');
+        } else {
+          return next();
+        }
+      });
+  };
 
 
 module.exports = userController;

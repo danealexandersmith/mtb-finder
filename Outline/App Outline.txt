@@ -25,3 +25,12 @@ Database:
         - rear travel
         - hourly rate
     
+
+    Functionality: 
+        - login
+        - logout
+        - search by state
+            - search by radius of current location
+        - upload photos with posts
+        - oauth
+        - implement jots

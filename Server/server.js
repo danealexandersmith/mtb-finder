@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const { Console } = require('node:console');
 const fs = require('fs');
+require('dotenv').config();
 
 const userController = require(path.resolve(__dirname, './userController.js'))
 
@@ -19,7 +20,8 @@ app.use(express.urlencoded());
 const PORT = 3000;
 
 
-const mongoURI =  'mongodb+srv://rocknrolldane:kG2iS5sGC6xJu2CQ@cluster0.wdjltuo.mongodb.net/?retryWrites=true&w=majority';
+const mongoURI = process.env.MONGO_KEY;
+
 mongoose.connect(mongoURI);
 
 
@@ -53,10 +55,21 @@ app.get('/mountain_background_3.jpeg', (req, res) => {
     res.end(cssData);
   });
 
-  app.post('/register', userController.testBody, (req, res) => {
-    res.status(200);
+  app.post('/register', userController.createUser, (req, res) => {
+    res.redirect('/');
   });
 
+  app.post('/login', userController.authenticate, (req, res) => {
+    res.redirect('/userPage');
+  });
+
+
+// Authorized routes
+
+  // send user hompage
+  app.get('/userPage', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../client/userPage.html'))
+  });
 
 
 // 404 handler
