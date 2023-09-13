@@ -6,7 +6,7 @@ const { Console } = require('node:console');
 const fs = require('fs');
 require('dotenv').config();
 
-const userController = require(path.resolve(__dirname), './servers/userController.js');
+const userController = require(path.resolve(__dirname), './servers/controllers/userController.js');
 
 const testPath = path.resolve(__dirname);
 console.log(testPath);
