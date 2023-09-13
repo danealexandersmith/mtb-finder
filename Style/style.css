@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Rubik+Iso&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Lato&family=Rubik+Iso&family=Shadows+Into+Light&display=swap');
+
+html { 
+    background: url('../mountain_background_3.jpeg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  #welcome {
+    padding-top: 20px;
+    margin-left: 35%;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    /*
+    text-shadow:
+      1px 1px 0 #000,
+      1px -1px 0 #000,
+      -1px -1px 0 #000,
+      -1px 1px 0 #000;
+    */
+    text-align: center;
+    width: 30%;
+    /*background-color: white;
+    padding: 10px;
+    border: 1px solid grey; */
+  }
+
+  .form {
+    display: grid;
+    height: 30vh;
+    place-items: center;
+  }
+
+  input {
+    margin-bottom: 5px;
+}
+
+a { 
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    color: black;
+    /*
+    text-shadow: 
+    2px 2px 0 #000;
+    -.5px -.5px 0 #000,
+    -.5px .5px 0 #000,
+    .5px -.5px 0 #000; 
+    */
+
+   /* padding-left: 10px;
+    padding-top: 20px;
+    */
+}
+
+h1 {
+   /* padding-left: 10px; */
+    color: white;
+    font-family: 'Lato', sans-serif;
+    text-shadow:
+      3px 3px 0 #000;
+    font-size: 50px;
+};
+

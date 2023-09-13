@@ -1,0 +1,27 @@
+App Outline:
+    - Login Page
+            - user login (routes to User Homepage)
+            - signup
+        - Signup (reroutes to Login Page)
+            - username
+            - password
+    - User Homepage
+            - new post button
+            - search bar (loads ads based on city/state)
+
+
+Database:
+    - User
+        - username
+        - password
+    - Rental Ad
+        - username
+        - email
+        - city
+        - state
+        - bike model
+        - bike year
+        - front travel
+        - rear travel
+        - hourly rate
+    
