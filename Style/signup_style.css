@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Rubik+Iso&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
 
+
 html { 
     background: url('../mountain_background_3.jpeg') no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -38,4 +39,5 @@ h1 {
    color: white;
    font-family: 'Lato', sans-serif;
 };
+
 
