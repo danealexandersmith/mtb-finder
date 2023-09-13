@@ -34,3 +34,4 @@ Database:
         - upload photos with posts
         - oauth
         - implement jots
+        - clear form on submission (set state in redux)

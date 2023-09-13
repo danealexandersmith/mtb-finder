@@ -6,7 +6,10 @@ const { Console } = require('node:console');
 const fs = require('fs');
 require('dotenv').config();
 
-const userController = require(path.resolve(__dirname, './userController.js'))
+const userController = require(path.resolve(__dirname), './servers/userController.js');
+
+const testPath = path.resolve(__dirname);
+console.log(testPath);
 
 const app = express();
 
@@ -17,7 +20,7 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded());
 
-const PORT = 3000;
+const PORT = process.env.PORT;
 
 
 const mongoURI = process.env.MONGO_KEY;
@@ -87,3 +90,5 @@ app.use((err, req, res, next) => {
 
 
 app.listen(PORT, ()=>{ console.log(`Listening on port ${PORT}...`); });
+
+module.exports = app;
