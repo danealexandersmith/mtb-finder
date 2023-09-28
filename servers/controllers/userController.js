@@ -1,4 +1,5 @@
-const User = require('./models/UserModel');
+const path = require('path')
+const User = require(path.resolve('./models/UserModel.js'))
 const express = require('express');
 const { Console } = require('node:console'); 
 const bcrypt = require('bcryptjs');

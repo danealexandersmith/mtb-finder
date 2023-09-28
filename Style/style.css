@@ -34,7 +34,12 @@ html {
     display: grid;
     height: 30vh;
     place-items: center;
+    /* transition: transform; */
   }
+
+  /* .form:hover {
+    transform: translateX(-10px);
+  } */
 
   input {
     margin-bottom: 5px;

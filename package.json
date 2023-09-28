@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
-        "start": "set NODE_ENV=development && node servers/server.js"
+        "start": "set NODE_ENV=development && nodemon servers/server.js"
     },
     "repository": {
         "type": "git",
@@ -18,6 +18,7 @@
         "dotenv": "^16.3.1",
         "express": "^4.13.4",
         "express-session": "^1.13.0",
+        "jsonwebtoken": "^9.0.2",
         "mocha": "^10.2.0",
         "mongodb": "^6.0.0",
         "mongoose": "^6.12.0",
@@ -27,6 +28,11 @@
         "supertest": "^6.3.3"
     },
     "devDependencies": {
-        "eslint": "^7.12.0"
+        "@babel/preset-env": "^7.22.20",
+        "@babel/preset-react": "^7.22.15",
+        "css-loader": "^6.8.1",
+        "eslint": "^7.12.0",
+        "sass-loader": "^13.3.2",
+        "style-loader": "^3.3.3"
     }
 }
