@@ -17,3 +17,22 @@ html {
     text-shadow:
     3px 3px 0 #000;
   }
+
+  a { 
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    color: black;
+    text-align: center;
+    padding-left: 100vh;
+    /*
+    text-shadow: 
+    2px 2px 0 #000;
+    -.5px -.5px 0 #000,
+    -.5px .5px 0 #000,
+    .5px -.5px 0 #000; 
+    */
+
+   /* padding-left: 10px;
+    padding-top: 20px;
+    */
+}

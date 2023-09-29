@@ -82,6 +82,16 @@ app.get('/mountain_background_3.jpeg', (req, res) => {
     res.end(cssData);
   });
 
+  app.get('/listItem', sessionController.isLoggedIn, (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../client/listItem.html'))
+  });
+
+  app.get('/style/listItem.css', (req, res) => {  
+    const cssData = fs.readFileSync(path.resolve(__dirname,'../style/listItem.css'));
+    res.writeHead(200, {'Content-Type': 'text/css'});
+    res.end(cssData);
+  });
+
 
 // 404 handler
 
